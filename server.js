@@ -10,11 +10,15 @@ var connection = mysql.createConnection({
   port:process.env.RDS_PORT
 
 });
-connection.connect();
-connection.query('CREATE TABLE Persons (PersonID int,LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255))', function (err, rows, fields) {
-  if (err) throw err
-  console.log('The solution is: ', rows[0].solution);
-});
+connection.connect(function(err) {
+    if (err) {
+      console.error('error connecting: ' + err.stack);
+      return;
+    }
+   
+    console.log('connected as id ' + connection.threadId);
+  });
+  
 app.get("/",function(req,res){
 
 res.send("This is homepage sql");
