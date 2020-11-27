@@ -18,9 +18,13 @@ connection.connect(function(err) {
    
     console.log('connected as id ' + connection.threadId);
   });
-  
+
 app.get("/",function(req,res){
 
-res.send("This is homepage sql");
+connection.query('SELECT `id`, `name`, `class` FROM `user`', function (error, results, fields) {
+  if (error) throw error;
+  console.log('The solution is: ', results[0]);
+});
+res.send(results);
 });
 app.listen(port);
