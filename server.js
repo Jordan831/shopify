@@ -19,6 +19,6 @@ connection.query('CREATE TABLE Persons (PersonID int,LastName varchar(255),First
 })
 app.get("/",function(req,res){
 
-res.send("This is homepage");
+res.send("This is homepage sql");
 });
 app.listen(port);
