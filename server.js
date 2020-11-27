@@ -21,7 +21,7 @@ connection.connect(function(err) {
 
 app.get("/",function(req,res){
 
-connection.query('show tables', function (error, results, fields) {
+connection.query('select * from user', function (error, results, fields) {
   if (error) throw error;
   console.log('The solution is: ', results);
   res.send(results);
