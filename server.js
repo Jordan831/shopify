@@ -1,9 +1,8 @@
-const app = require('express');
-var port = process.env.PORT || 3000;
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-  })
-  
-  app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-  })
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 5000;
+app.get("/",function(req,res){
+
+res.send("This is homepage");
+});
+app.listen(port);
