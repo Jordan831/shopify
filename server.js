@@ -4,10 +4,12 @@ var port = process.env.PORT || 5000;
 
 var mysql = require('mysql')
 var connection = mysql.createConnection({
-  host: 'aay55dgt76z9oa.c0ybtf9rhhqe.ap-south-1.rds.amazonaws.com',
-  user: 'root',
-  password: 'password',
-  database: 'shopify'
+  host:process.env.RDS_HOSTNAME,
+  user:process.env.RDS_USERNAME,
+  password: process.env.RDS_PASSWORD,
+  database: process.env.RDS_DB_NAME,
+  port:process.env.RDS_PORT
+
 })
 
 connection.connect()
