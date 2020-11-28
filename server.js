@@ -19,6 +19,7 @@ connection.connect(function(err) {
     console.log('connected as id ' + connection.threadId);
   });
 
+  
 app.get("/",function(req,res){
 
 connection.query('select * from user', function (error, results, fields) {
