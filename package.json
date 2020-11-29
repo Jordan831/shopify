@@ -11,12 +11,13 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql-yoga": "^1.18.3",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6"
   },
   "devDependencies": {},
   "scripts": {
     "test": "nodemon index.js",
-    "start": "babel-node index.js"
+    "start": "nodemon --exec babel-node index.js"
   },
   "repository": {
     "type": "git",
