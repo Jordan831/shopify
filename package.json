@@ -15,8 +15,9 @@
     "nodemon": "^2.0.6"
   },
   "devDependencies": {},
-  "scripts": {
-    "start": "node index.js",
+   "scripts": {
+    "prestart": "npm run build",
+    "start": "npm run build",
     "build": "babel-node index.js"
   },
   "repository": {
