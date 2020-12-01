@@ -5,7 +5,12 @@ import checkoutRouter from "./routers/checkout";
 import axios from 'axios';
 dotenv.config({path:'./config/config.env'});
 const app = express();
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 3000;
+
+app.get("/",(req,res)=>{
+
+    res.json("this is homepage");
+});
 // const ax = axios.create({
 // baseURL:process.env.SHOP,
 // auth: {
@@ -18,4 +23,6 @@ var port = process.env.PORT || 5000;
 // app.set('ax',ax);
 // app.use('/discounts',discountRouter);
 // app.use("/checkout",checkoutRouter);
-app.listen(port);
+app.listen(port,(req,res)=>{
+    console.log("running"+port);
+});
