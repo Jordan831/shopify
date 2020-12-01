@@ -1,11 +1,12 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import discountRouter from './routers/discount';
-import checkoutRouter from "./routers/checkout";
-import axios from 'axios';
-dotenv.config({path:'./config/config.env'});
+//import express from 'express';
+var express = require('express');
+//import dotenv from 'dotenv';
+// import discountRouter from './routers/discount';
+// import checkoutRouter from "./routers/checkout";
+// import axios from 'axios';
+// dotenv.config({path:'./config/config.env'});
 const app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 
 app.get("/",(req,res)=>{
 

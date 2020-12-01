@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "npm run build",
+    "start": "node index.js",
     "build": "babel-node index.js"
   },
   "repository": {
