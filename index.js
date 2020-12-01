@@ -1,4 +1,5 @@
-import express from 'express';
+//import express from 'express';
+var express =require('express');
 //import dotenv from 'dotenv';
 // import discountRouter from './routers/discount';
 // import checkoutRouter from "./routers/checkout";

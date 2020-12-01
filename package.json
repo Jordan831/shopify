@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
    "scripts": {
-    "start":"babel-node index.js"
+    "start":"node index.js"
   },
   "repository": {
     "type": "git",
