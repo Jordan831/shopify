@@ -16,8 +16,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node index.js",
-    "start": "babel-node index.js"
+    "start": "npm run build",
+    "build": "babel-node index.js"
   },
   "repository": {
     "type": "git",
