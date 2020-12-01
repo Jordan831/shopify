@@ -1,5 +1,5 @@
-//import express from 'express';
-var express =require('express');
+import express from 'express';
+//var express =require('express');
 //import dotenv from 'dotenv';
 // import discountRouter from './routers/discount';
 // import checkoutRouter from "./routers/checkout";
@@ -10,7 +10,7 @@ var port = process.env.PORT || 5000;
 
 app.get("/",(req,res)=>{
 
-    res.json("this is homepage");
+    res.json("this is new homepage");
 });
 // const ax = axios.create({
 // baseURL:process.env.SHOP,
