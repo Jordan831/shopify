@@ -14,10 +14,12 @@
     "mysql": "^2.18.1",
     "nodemon": "^2.0.6"
   },
-  "devDependencies": {},
-   "scripts": {
-    "start":"npm run build",
-    "build": "node server.js"
+  "devDependencies": {
+    "@babel/register": "^7.12.1"
+  },
+  "scripts": {
+    "start": "npm run build",
+    "build": "babel-node server.js"
   },
   "repository": {
     "type": "git",
