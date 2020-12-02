@@ -18,8 +18,7 @@
     "@babel/register": "^7.12.1"
   },
   "scripts": {
-    "start": "npm run build",
-    "build": "babel-node server.js"
+    "start": "babel-node server.js"
   },
   "repository": {
     "type": "git",
