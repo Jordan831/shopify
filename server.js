@@ -3,7 +3,6 @@ import express from 'express';
 //var express =require('express');
 import dotenv from 'dotenv';
  import discountRouter from './routers/discount';
- import checkoutRouter from "./routers/checkout";
  import axios from 'axios';
  dotenv.config({path:'./config/config.env'});
 const app = express();
@@ -24,7 +23,6 @@ app.get("/",(req,res)=>{
 
 app.set('ax',ax);
  app.use('/discounts',discountRouter);
- app.use("/checkout",checkoutRouter);
 app.listen(port,(req,res)=>{
     console.log("running"+port);
 });
