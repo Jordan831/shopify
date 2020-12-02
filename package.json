@@ -16,7 +16,8 @@
   },
   "devDependencies": {},
    "scripts": {
-    "start":"babel-node index.js",
+     "prestart":"npm run build",
+    "start":"node index.js",
     "build":"babel-node index.js",
     "eb:prod": "npm run build"
   },
