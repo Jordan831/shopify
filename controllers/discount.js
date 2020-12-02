@@ -17,7 +17,7 @@ var ax = req.app.get('ax');
 var data;
 const result=  await ax.post('price_rules.json',{
 "price_rule": {
-"title": "hope11",
+"title": "viks",
 "target_type": "line_item",
 "target_selection": "all",
 "allocation_method": "across",
