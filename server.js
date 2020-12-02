@@ -1,31 +1,29 @@
-var express = require('express');
-var app = express();
+import express from 'express';
+//var express =require('express');
+//import dotenv from 'dotenv';
+// import discountRouter from './routers/discount';
+// import checkoutRouter from "./routers/checkout";
+// import axios from 'axios';
+// dotenv.config({path:'./config/config.env'});
+const app = express();
 var port = process.env.PORT || 5000;
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-  host:process.env.RDS_HOSTNAME,
-  user:process.env.RDS_USERNAME,
-  password: process.env.RDS_PASSWORD,
-  database: 'shopify',
-  port:process.env.RDS_PORT
 
-});
-connection.connect(function(err) {
-    if (err) {
-      console.error('error connecting: ' + err.stack);
-      return;
-    }
-   
-    console.log('connected as id ' + connection.threadId);
-  });
+app.get("/",(req,res)=>{
 
-  
-app.get("/",function(req,res){
+    res.json("this is new homepage");
+});
+// const ax = axios.create({
+// baseURL:process.env.SHOP,
+// auth: {
+// username: process.env.API_KEY,
+// password: process.env.API_PASSWORD
+// },
+// headers: {'Content-Type': 'application/json'}
+// });
 
-connection.query('select * from user', function (error, results, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', results);
-  res.send(results);
+// app.set('ax',ax);
+// app.use('/discounts',discountRouter);
+// app.use("/checkout",checkoutRouter);
+app.listen(port,(req,res)=>{
+    console.log("running"+port);
 });
-});
-app.listen(port);
